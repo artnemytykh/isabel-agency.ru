@@ -1,0 +1,237 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+{% endblock css %}
+
+{% block title %}Isabel{% endblock title %}
+
+{% block body %}
+
+<section id="welcome">
+    <div class="welcome-container">
+        <div class="welcome">
+            <div class="header">Рекламное агентство isabel</div>
+            <div class="sub-header">Мы специализируемся на рекламе в интернете, одном из лучших изобретений человечества</div>
+            <button class="primary-button call">Забронировать звонок</button>
+        </div>
+    </div>
+</section>
+
+<section id="ruler">
+    <div class="ruler">
+        <span class="slide">
+            ISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABEL®
+        </span>
+        <span class="slide">
+            ISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABELISABEL®
+        </span>
+    </div>
+</section>
+<div class="container">
+
+    <section id="we-help">
+        <div class="we-help-container">
+            <div class="we-help">
+                <div class="header">Мы помогаем бизнесам всех секторов</div>
+                <div class="body">
+                    <div class="card">
+                        <div class="card-header">Выделяться в цифровом мире</div>
+                        <div class="card-image">
+                            <img src="{% static 'core/img/img1.png' %}">
+                        </div>
+                        <div class="card-sub-header">Иметь узнаваемость в разуме людей, создавая иллюзию устоявшегося бренда.</div>
+                        <div class="card-link">
+                            <a class="call">Забронировать звонок ></a>
+                        </div>
+                    </div>
+                    <div class="card center">
+                        <div class="card-header">Охватывать новых клиентов</div>
+                        <div class="card-image">
+                            <img src="{% static 'core/img/img2.png' %}">
+                        </div>
+                        <div class="card-sub-header">Привлекать огромные массы людей, вероятнее всего готовых купить ваши услуги или товары.</div>
+                        <div class="card-link">
+                            <a class="call">Забронировать звонок ></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">Иметь постоянный рост</div>
+                        <div class="card-image">
+                            <img src="{% static 'core/img/img3.png' %}">
+                        </div>
+                        <div class="card-sub-header">Увеличение продаж и, тем самым, иметь больший капитал для реинвестиций в компанию.</div>
+                        <div class="card-link">
+                            <a class="call">Забронировать звонок ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ads">
+        <div class="ads-container">
+            <div class="ads">
+                <div class="header">Пока вы занимаетесь бизнесом, ваша реклама работает</div>
+                <div class="body">
+                    <div class="card">
+                        <div class="card-header">В лидирующих интернет площадках России</div>
+                        <div class="card-graph">
+
+                            <div class="title">
+                                <img src="{% static 'core/img/yandex_icon.png' %}">
+                                Яндекс
+                            </div>
+                            <div class="chart" style="width: 100%;">
+                                <b>100,3</b> миллиона человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/vk_icon.png' %}">
+                                Вконтакте
+                            </div>
+                            <div class="chart" style="width: 89%;">
+                                <b>89,9</b> миллионов человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/tg_icon.png' %}">
+                                Telegram
+                            </div>
+                            <div class="chart" style="width: 86%;">
+                                <b>86,3</b> миллиона человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/dzen_icon.png' %}">
+                                Дзен
+                            </div>
+                            <div class="chart" style="width: 77.3%;">
+                                <b>77,5</b> миллионов человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/ok_icon.png' %}">
+                                Одноклассники
+                            </div>
+                            <div class="chart" style="width: 40%;">
+                                <b>39,9</b> миллионов
+                            </div>
+
+                            <div class="title"></div>
+                            <div class="chart measures">
+                                <span>0</span>
+                                <span>100</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="separator">и/или</div>
+                    <div class="card">
+                        <div class="card-header">В лидирующих маркетплейсах России</div>
+                        <div class="card-graph">
+
+                            <div class="title">
+                                <img src="{% static 'core/img/avito_icon.png' %}">
+                                Avito
+                            </div>
+                            <div class="chart" style="width: 100%;">
+                                <b>60,9</b> миллионов человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/wb_icon.png' %}">
+                                Wildberries
+                            </div>
+                            <div class="chart" style="width: 96.388%;">
+                                <b>58,7</b> миллионов человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/ozon_icon.png' %}">
+                                Ozon
+                            </div>
+                            <div class="chart" style="width: 96.223%;">
+                                <b>58,6</b> миллионов человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/ym_icon.png' %}">
+                                Яндекс Маркет
+                            </div>
+                            <div class="chart" style="width: 61%;">
+                                <b>37,1</b> миллион человек в месяц
+                            </div>
+
+                            <div class="title">
+                                <img src="{% static 'core/img/mm_icon.png' %}">
+                                Мегамаркет
+                            </div>
+                            <div class="chart" style="width: 34%;">
+                                <b>20,8</b> миллионов
+                            </div>
+
+                            <div class="title"></div>
+                            <div class="chart measures">
+                                <span>0</span>
+                                <span>60</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="actions">
+        <div class="actions-container">
+            <div class="actions">
+                <div class="header">Все что вам нужно сделать, это</div>
+                <div class="body">
+                    <div class="card">
+                        <div class="num">1</div>
+                        <div class="item"><b>Присутствовать на видеозвонке с нами</b>, где мы обсудим пакет услуг, стратегию, цену и потенциальные доходы от рекламы (ROAS, Returns on Ad Spend).</div>
+                    </div>
+                    <div class="card">
+                        <div class="num">2</div>
+                        <div class="item"><b>Ознакомится со стратегией</b>, которая подрузамевает, что вы будете находить время для еженедельных отчетах, результатах и подробностях нашей работы. Соблюдать рекомендации нашей коммьюникации.</div>
+                    </div>
+                    <div class="card">
+                        <div class="num">3</div>
+                        <div class="item"><b>Согласовать договоры</b> (NDA, Non-disclosure Agreement; Агентский договор).<br><span style="color: #494949;">*NDA, или Соглашение о Конфиденциальности подписывается лишь в случае рекламы на маркетплейсах.</span></div>
+                    </div>
+                    <div class="card">
+                        <div class="num">4</div>
+                        <div class="item"><b>Выделить бюджет</b>, который мы просим на работу рекламы и комиссию работникам агентства.<span style="color: #494949;"><br>*Мы пользуемся многочисленными калькуляторами потенциальных возврат с инвестиций, цена за услуги расчитывается индивидуально под каждый бизнес.</span></div>
+                    </div>
+                    <div class="card">
+                        <div class="num">5</div>
+                        <div class="item"><b>Стать нашими друзьями</b>. Мы как ни как лишь стараемся сделать вам больше денег. Мы верим в рост вашей организации и ее доминантность на рынке.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="container">
+    <section id="interested">
+        <div class="interested-container">
+            <div class="interested">
+                <div class="header">Заинтересованны? Дайте нам знать, мы с вами свяжемся</div>
+                <div class="body">
+                    <a class="call">Забронировать звонок</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section id="up">
+    <button class="up">Наверх</button>
+</section>
+
+{% endblock body %}

@@ -1,0 +1,56 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+{% endblock css %}
+
+{% block title %}Blog{% endblock title %}
+
+{% block body %}
+<div class="blog-container">
+    <h1>Blog</h1>
+
+    <div class="pagination">
+        <div class="step-links">
+
+            {% if posts.has_previous %}
+                <a href="?page={{ posts.previous_page_number }}"><button><</button></a>
+            {% else %}
+                <a href=""><button disabled><</button></a>
+            {% endif %}
+
+            <div class="page-number">
+                {{ posts.number }}
+            </div>
+
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}"><button>></button></a>
+            {% else %}
+                <a href=""><button disabled>></button></a>
+            {% endif %}
+    
+            <div class="current">
+                Страница {{ posts.number }} из {{ posts.paginator.num_pages }}
+            </div>
+
+            <div class="posts">
+                Посты {{post_count}} из {{ all_posts.count }}
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <div class="title">{{post.title}}</div>
+                <div hidden>{{post.pk}}</div>
+                <div class="body">{{post.body|safe}}</div>
+            </div>
+        {% endfor %}
+    </div>
+    
+</div>
+{% endblock body %}

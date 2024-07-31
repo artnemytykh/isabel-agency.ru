@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock css %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="{% static 'core/script.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div class="phone-call">
+        <div class="cont">
+            <h2>Забронировать звонок</h2>
+            <form action="{% url 'core:index' %}" method="post">
+                {% csrf_token %}
+                <div>Ваше имя<span style="color: #FF1F00;">*</span></div>
+                <input type="text" name="Name" required>
+                <div>Ваш WhatsApp (Номер телефона)<span style="color: #FF1F00;">*</span></div>
+                <input type="text" name="Number" required>
+                <div>Ваш e-mail<span style="color: #FF1F00;">*</span></div>
+                <input type="email" name="Email" required>
+                <div>Ваш веб-сайт</div>
+                <input type="text" name="Website">
+                <div>Ваша компания<span style="color: #FF1F00;">*</span></div>
+                <input type="text" name="Company" required>
+                <div>Ваша роль в компании</div>
+                <input type="text" name="Role">
+                <div class="button">
+                    <button type="submit" class="primary-button">Забронировать звонок</button>
+                </div>  
+            </form>
+        </div>
+    </div>
+
+    <section id="navbar">
+        <div class="navbar">
+            <nav>
+                <a href="{% url 'core:index' %}"><div class="nav-item logo">isabel</div></a>
+                <a href="{% url 'blog:index' %}"><div class="nav-item">Блог</div></a>
+                <div class="nav-item phone call">Звонок</div>
+            </nav>
+        </div>
+    </section>
+    
+    {% block body %}{% endblock body %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                
+                // Serialize form data
+                var formData = $(this).serialize();
+                
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        // Handle the JSON response
+                        if (response.redirect_url) {
+                            window.location.href = response.redirect_url;
+                        } else {
+                            // Handle other responses if needed
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle errors if necessary
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'core.layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+{% endblock css %}
+
+{% block title %}
+    404
+{% endblock title %}
+
+{% block body %}
+    <section id="four" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <div class="container" style="text-align: center;">
+            <h1>This page is not found</h1>
+        </div>
+    </section>
+{% endblock body %}

@@ -1,0 +1,573 @@
+html {
+    font-size: 20px;
+}
+body {
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.phone-call {
+    display: none;
+    position: fixed;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+    background: #00000023;
+}
+.phone-call .cont {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2em 3em;
+}
+.phone-call .cont h2{
+    font-weight: 300;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.phone-call .cont form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.phone-call .cont form * {
+    margin: .05em 0;
+}
+.phone-call .cont form input {
+    padding: 1em;
+}
+.phone-call .cont form .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#navbar {
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background: #fff;
+    z-index: 10000;
+}
+#navbar .navbar {
+    box-shadow: none;
+}
+#navbar .navbar nav {
+    display: flex;
+}
+#navbar .navbar nav a {
+    color: #000000;
+    text-decoration: none;
+}
+#navbar .navbar nav .nav-item {
+    padding: 0.25em 1em;
+    font-weight: 450;
+    transition: background 0.1s, color 0.05s;
+}
+#navbar .navbar nav .nav-item:hover {
+    background: #FF1F00;
+    color: #fff;
+    cursor: pointer;
+}
+#navbar .navbar nav .logo {
+    font-weight: 650;
+}
+
+#welcome {
+    height: 85vh;
+    white-space: wrap;
+}
+#welcome .welcome-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome .welcome-container .welcome {
+    width: 70%;
+}
+#welcome .welcome-container .welcome .header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: .4em 0;
+}
+#welcome .welcome-container .welcome .sub-header {
+    font-size: 1.67rem;
+    font-weight: 300;
+    color: #494949;
+    margin: .4em 0;
+}
+.primary-button {
+    font-size: 1rem;
+    padding: .75em 1.5em;
+    border-radius: 3rem;
+    border: 1px solid #6E6E6E;
+    margin: 1em 0;
+    cursor: pointer;
+}
+#welcome .welcome-container .welcome .primary-button:hover {
+    background: #e9e9e9;
+    text-decoration: underline;
+}
+
+#ruler {
+    overflow-x: hidden;
+    overscroll-behavior-inline: contain;
+    white-space: nowrap;
+    width: 100%;
+}
+@keyframes slide {
+    from {
+        transform: translate(0%);
+    } 
+    to {
+        transform: translate(-100%);
+    }
+}
+#ruler .slide {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    animation: 50s slide infinite linear;
+    font-size: 4rem;
+    font-style: italic;
+}
+#ruler .slide:hover {
+    animation-play-state: paused;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 90%;
+}
+
+#we-help {
+    height: 100vh;
+}
+#we-help .we-help-container  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#we-help .we-help-container .we-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+#we-help .we-help-container .we-help .header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: .4em 0;
+}
+#we-help .we-help-container .we-help .body {
+    width: 100%;
+    display: flex;
+}
+#we-help .we-help-container .we-help .body .card {
+    margin: 0 1em;
+    width: 33%;
+}
+#we-help .we-help-container .we-help .body .center {
+    margin: 0 1em;
+}
+#we-help .we-help-container .we-help .body .card .card-header {
+    font-size: 1.45rem;
+    font-weight: 300;
+    margin: 1em 0;
+    text-align: center;
+}
+#we-help .we-help-container .we-help .body .card .card-image {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+#we-help .we-help-container .we-help .body .card .card-image img {
+    width: 25%;
+}
+#we-help .we-help-container .we-help .body .card .card-sub-header {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 1em 0;
+}
+#we-help .we-help-container .we-help .body .card .card-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1em 0;
+}
+#we-help .we-help-container .we-help .body .card .card-link a {
+    color: #FF1F00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#ads {
+    height: 100vh;
+}
+#ads .ads-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ads .ads-container .ads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+#ads .ads-container .ads .header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: .4em 0;
+    text-align: center;
+}
+#ads .ads-container .ads .body {
+    width: 100%;
+    display: flex;
+}
+#ads .ads-container .ads .separator {
+    writing-mode:tb-rl; 
+    align-self: center; 
+    margin: 0 1em;
+}
+#ads .ads-container .ads .body .card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#ads .ads-container .ads .body .card .card-header {
+    font-size: 1.45rem;
+    text-align: center;
+    font-weight: 300;
+    margin: .4em 0;
+}
+#ads .ads-container .ads .body .card .card-graph {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    margin: .4em 0;
+}
+#ads .ads-container .ads .body .card .card-graph .title {
+    display: flex;
+    align-items: center;
+    margin: .4em 0;;
+}
+#ads .ads-container .ads .body .card .card-graph .chart {
+    font-size: 0.83rem;
+    font-style: italic;
+    color: #fff;
+    background: #FF1F00;
+    margin: .4em 0;;
+}
+#ads .ads-container .ads .body .card .card-graph .measures {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    font-style: normal;
+    color: #000000;
+}
+#ads .ads-container .ads .body .card .card-graph .title img {
+    width: 1em;
+    margin-right: 2em;
+}
+
+#actions .actions {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#actions .actions-container .actions .header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: .4em 0;
+    text-align: center;
+}
+#actions .actions-container .actions .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#actions .actions-container .actions .body .card {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 3%;
+    margin: 2em 0;
+}
+#actions .actions-container .actions .body .card .num {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FF1F00;
+    justify-self: center;   
+}
+#actions .actions-container .actions .body .card .item {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+#interested .interested {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#interested .interested-container .interested .header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: .4em 0;
+    text-align: center;
+    font-style: italic;
+}
+#interested .interested-container .interested .body {
+    display: flex;
+    justify-content: center;
+}
+#interested .interested-container .interested .body a {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 0 1em 0;
+    text-align: center;
+    color: #FF1F00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#up {
+    width: 100%;
+    background: #FF1F00;
+    display: flex;
+    justify-content: center;
+}
+#up .up {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    height: 100%;
+    color: #fff;
+    width: 100%;
+    padding: .25em;
+}
+#up .up:hover {
+    text-decoration: underline;
+    background: #ff452d;
+}
+
+@media screen and (max-width: 431px) {
+    html {
+        font-size: 4.706vw;
+    }
+    #welcome {
+        height: auto;
+    }
+    #welcome .welcome-container {
+        display: block;
+        margin: 1em;
+    }
+    #welcome .welcome-container .welcome {
+        width: 90%;
+    }
+    #welcome .welcome-container .welcome .header {
+        font-size: 1.5rem;
+    }
+    #welcome .welcome-container .welcome .sub-header {
+        font-size: 1.25rem;
+    }
+    #welcome .welcome-container .welcome .primary-button {
+        font-size: .75rem;
+    }
+    #we-help {
+        height: auto;
+    }
+    #we-help .we-help-container .we-help .header {
+        font-size: 1.25rem;
+    }
+    #we-help .we-help-container .we-help .body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #we-help .we-help-container .we-help .body .card {
+        width: 90%;
+    }
+    #we-help .we-help-container .we-help .body .card .card-header {
+        font-size: 1.25rem;
+    }
+    #we-help .we-help-container .we-help .body .card .card-sub-header {
+        font-size: 1rem;
+    }
+    #we-help .we-help-container .we-help .body .card .card-link {
+        font-size: 1rem;
+    }
+
+    #ads {
+        height: auto;
+    }
+    #ads .ads-container {
+        display: block;
+    }
+    #ads .ads-container .ads {
+        display: block;
+    }
+    #ads .ads-container .ads .header {
+        font-size: 1.5rem;
+    }
+    #ads .ads-container .ads .body {
+        flex-direction: column;
+    }
+    #ads .ads-container .ads .body .card {
+        width: 100%;
+    }
+    #ads .ads-container .ads .body .card .card-header {
+        font-size: 1rem;
+    }
+    #ads .ads-container .ads .body .card .card-graph .title {
+        font-size: 0.8rem;
+    }
+    #ads .ads-container .ads .body .card .card-graph .chart {
+        font-size: .5rem;
+    }
+    #ads .ads-container .ads .separator {
+        writing-mode: horizontal-tb; 
+    }
+
+    #actions .actions-container .actions .header {
+        font-size: 1.5rem;
+    }
+    #actions .actions-container .actions .body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #actions .actions-container .actions .body .card {
+        grid-template-columns: 10% auto;
+        margin: 1em 0;
+    }
+    #actions .actions-container .actions .body .card .num {
+        font-size: 2rem;   
+    }
+    #actions .actions-container .actions .body .card .item {
+        font-size: 0.75rem;
+    }
+
+    .container {
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (min-width: 431px) and (max-width:830px) {
+    html {
+        font-size: 2.41vw;
+    }
+    #navbar .navbar nav .nav-item {
+        font-size: 1.9rem;
+    }
+    #welcome {
+        height: auto;
+    }
+    #welcome .welcome-container {
+        display: block;
+        margin: 1em;
+    }
+    #welcome .welcome-container .welcome {
+        width: 90%;
+    }
+    #welcome .welcome-container .welcome .header {
+        font-size: 2.5rem;
+    }
+    #welcome .welcome-container .welcome .sub-header {
+        font-size: 2rem;
+    }
+    #welcome .welcome-container .welcome .primary-button {
+        font-size: 1.25rem;
+    }
+    #we-help {
+        height: auto;
+    }
+    #we-help .we-help-container .we-help .body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #we-help .we-help-container .we-help .body .card {
+        width: 85%;
+    }
+    #we-help .we-help-container .we-help .body .card .card-header {
+        font-size: 2rem;
+    }
+    #we-help .we-help-container .we-help .body .card .card-sub-header {
+        font-size: 1.75rem;
+    }
+    #we-help .we-help-container .we-help .body .card .card-link {
+        font-size: 1.75rem;
+    }
+
+    #ads {
+        height: auto;
+    }
+    #ads .ads-container {
+        display: block;
+    }
+    #ads .ads-container .ads {
+        display: block;
+    }
+    #ads .ads-container .ads .body {
+        flex-direction: column;
+    }
+    #ads .ads-container .ads .body .card {
+        width: 100%;
+    }
+    #ads .ads-container .ads .body .card .card-header {
+        font-size: 1.9rem;
+    }
+    #ads .ads-container .ads .body .card .card-graph .title {
+        font-size: 1.5rem;
+    }
+    #ads .ads-container .ads .body .card .card-graph .chart {
+        font-size: 1rem;
+    }
+    #ads .ads-container .ads .separator {
+        writing-mode: horizontal-tb; 
+        font-size: 1.5rem;
+    }
+
+    #actions .actions-container .actions .body .card {
+        grid-template-columns: 10% auto;
+    }
+    .container {
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (min-width: 831px) and (max-width: 1440px) {
+    #ads .ads-container .ads .body .card .card-header {
+        font-size: 2.153vw;
+    }
+    #ads .ads-container .ads .body .card .card-graph .title {
+        font-size: 1.806vw;
+    }
+    #ads .ads-container .ads .body .card .card-graph .chart {
+        font-size: 1.111vw;
+    }
+    .container {
+        grid-template-columns: 100%;
+    }
+}
+@media screen and (min-width: 1441px) {
+    html {
+        font-size: 1.39vw;
+    }
+}

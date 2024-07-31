@@ -1,0 +1,42 @@
+h1 {
+    font-weight: 300;
+}
+.blog-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.pagination {
+    margin: 1em 0;
+}
+.pagination .step-links {
+    display: flex;
+    align-items: center;
+}
+.pagination .step-links > * {
+    margin-right: 1em;
+}
+.pagination .step-links, .pagination .step-links a button{
+    font-size: 1.25rem;
+}
+.pagination .step-links a button {
+    background: #ECECEC;
+    border: 1px solid #ADADAD;
+    border-radius: .1em;
+    width: 1.5em;
+    height: 1.5em;
+}
+.posts .post {
+    margin: 1em 0;
+    border: 1px solid #ADADAD;
+    border-radius: .1em;
+}
+.posts .post > * {
+    margin: .75em 1em;
+}
+.posts .post .body {
+    color: #494949;
+}
+.blog-post-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
